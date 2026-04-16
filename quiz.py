@@ -33,5 +33,11 @@ def run_quiz():
     print("--- Welcome to the Ultimate CLI Quiz ---")
     print(f"You will be asked {total} questions. Good luck!\n")
 
+    for i, q in enumerate(questions, 1):
+        print(f"Question {i}: {q['question']}")
+        for option in q['options']:
+            print(option)
+
+
 if __name__ == "__main__":
     run_quiz()
