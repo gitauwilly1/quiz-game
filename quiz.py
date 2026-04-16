@@ -47,5 +47,11 @@ def run_quiz():
             except ValueError as e:
                 print(f"Invalid input: {e}")
 
+        if user_input == q['answer']:
+            print("Correct! \n")
+            score += 1
+        else:
+            print(f"Wrong. The correct answer was {q['answer']}.\n")
+
 if __name__ == "__main__":
     run_quiz()
