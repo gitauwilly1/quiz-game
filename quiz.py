@@ -53,5 +53,18 @@ def run_quiz():
         else:
             print(f"Wrong. The correct answer was {q['answer']}.\n")
 
+    print("--- Quiz Finished ---")
+    percentage = (score / total) * 100
+    
+    if percentage == 100:
+        feedback = "Excellent! Perfect score!"
+    elif percentage >= 70:
+        feedback = "Good job! You know your stuff."
+    else:
+        feedback = "Try again! Practice makes perfect."
+
+    print(f"Your Score: {score}/{total} ({percentage}%)")
+    print(f"Feedback: {feedback}")
+
 if __name__ == "__main__":
     run_quiz()
