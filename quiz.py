@@ -38,6 +38,14 @@ def run_quiz():
         for option in q['options']:
             print(option)
 
+        while True:
+            try:
+                user_input = input("Your answer (A/B/C/D): ").strip().upper()
+                if user_input not in ['A', 'B', 'C', 'D']:
+                    raise ValueError("Please enter only A, B, C, or D.")
+                break 
+            except ValueError as e:
+                print(f"Invalid input: {e}")
 
 if __name__ == "__main__":
     run_quiz()
