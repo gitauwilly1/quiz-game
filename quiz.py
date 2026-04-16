@@ -1,7 +1,7 @@
 import random
 
 def run_quiz():
-    
+
     questions = [
         {
             "question": "What is the capital of France?",
@@ -24,6 +24,14 @@ def run_quiz():
             "answer": "C"
         }
     ]
+
+    random.shuffle(questions)
+    
+    score = 0
+    total = len(questions)
+
+    print("--- Welcome to the Ultimate CLI Quiz ---")
+    print(f"You will be asked {total} questions. Good luck!\n")
 
 if __name__ == "__main__":
     run_quiz()
